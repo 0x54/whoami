@@ -31,8 +31,8 @@ h6 {
 
 p {
     margin: 0 0 20px;
-    font-size: 16px;
-    line-height: 1.6em;
+    font-size: 19px;
+    line-height: 1.4em;
 }
 
 p.lead {
@@ -107,7 +107,10 @@ a:focus {
 }
 
 .navbar-custom ul.nav ul.dropdown-menu {
-	  border-radius: 0;	
+	  border-radius: 0;
+    padding:0;
+    margin: 0;
+
 }
 
 .navbar-custom ul.nav ul.dropdown-menu li {
@@ -126,9 +129,15 @@ a:focus {
 .navbar-custom ul.nav ul.dropdown-menu li a:hover {
 	background: #fefefe;
 }
-
+.navbar-custom.top-nav-collapse ul.nav ul.dropdown-menu{
+  background: #BC002D;
+}
 .navbar-custom.top-nav-collapse ul.nav ul.dropdown-menu li a {
-	color: #666;
+	color: #fff!important;
+  background: #BC002D;
+}
+.navbar-custom.top-nav-collapse ul.nav ul.dropdown-menu li:hover a, .dropdown-menu {
+  background-color: rgba(255,255,255,.2);
 }
 
 .navbar-custom .nav li a {
@@ -304,8 +313,8 @@ hr {
 .intro {
 	width:100%;
 	position:relative;
-	
-	background: url(../img/bg1.jpg) no-repeat top center;
+	background: url(../img/bg1.jpg) no-repeat center center;
+  background-size: cover; 
 }
 
 #intro.intro {
@@ -343,8 +352,17 @@ hr {
 	border-color: #000;
 	border-style: none;
 	text-shadow: -1px 0 1px #000;
+  position: relative;
+  margin-bottom: 60px;
 }
-
+.intro .slogan h2 sub{
+  text-transform: lowercase;
+  position: absolute;
+  bottom: -23px;
+  left: 0;
+  right: 0;
+  font-size: 50%;
+}
 .intro .slogan h4 {
 	color: #fff;
 	text-shadow: -1px 1px 1px #000;
@@ -424,6 +442,231 @@ hr {
 /* ===========================
 --- Services
 ============================ */
+/**
+ * BxSlider v4.1.2 - Fully loaded, responsive content slider
+ * http://bxslider.com
+ *
+ * Written by: Steven Wanderski, 2014
+ * http://stevenwanderski.com
+ * (while drinking Belgian ales and listening to jazz)
+ *
+ * CEO and founder of bxCreative, LTD
+ * http://bxcreative.com
+ */
+
+
+/** RESET AND LAYOUT
+===================================*/
+
+.bx-wrapper {
+  position: relative;
+  margin: 0 auto 60px;
+  padding: 0;
+  *zoom: 1;
+  height: 100%;
+}
+
+.bx-wrapper img {
+  max-width: 100%;
+  display: block;
+}
+
+/** THEME
+===================================*/
+
+.bx-wrapper .bx-viewport {
+  background: #fff;
+  
+  /*fix other elements on the page moving (on Chrome)*/
+  -webkit-transform: translatez(0);
+  -moz-transform: translatez(0);
+      -ms-transform: translatez(0);
+      -o-transform: translatez(0);
+      transform: translatez(0);
+}
+
+.bx-wrapper .bx-pager,
+.bx-wrapper .bx-controls-auto {
+  position: absolute;
+  bottom: -30px;
+  width: 100%;
+}
+
+/* LOADER */
+
+.bx-wrapper .bx-loading {
+  min-height: 50px;
+  background: url('../img/loader.gif') center center no-repeat #fff;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+}
+
+/* PAGER */
+
+.bx-wrapper .bx-pager {
+  text-align: center;
+  font-size: .85em;
+  font-family: Arial;
+  font-weight: bold;
+  color: #666;
+  padding-top: 20px;
+}
+
+.bx-wrapper .bx-pager .bx-pager-item,
+.bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+  background: #666;
+  text-indent: -9999px;
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  outline: 0;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active {
+  background: #000;
+}
+
+/* DIRECTION CONTROLS (NEXT / PREV) */
+
+.bx-wrapper .bx-prev {
+  left: 5%;
+  background: url('../img/arrow_l.png') no-repeat center center;
+  background-size: contain;
+}
+
+.bx-wrapper .bx-next {
+  right: 5%;
+  background: url('../img/arrow_r.png') no-repeat center center;
+  background-size: contain;
+}
+
+.bx-wrapper .bx-controls-direction a {
+  position: absolute;
+  top: 50%;
+  margin-top: -25px;
+  outline: 0;
+  width: 50px;
+  height: 50px;
+  text-indent: -9999px;
+  z-index: 9999;
+}
+
+.bx-wrapper .bx-controls-direction a.disabled {
+  display: none;
+}
+
+/* AUTO CONTROLS (START / STOP) */
+
+.bx-wrapper .bx-controls-auto {
+  text-align: center;
+}
+
+.bx-wrapper .bx-controls-auto .bx-start {
+  display: block;
+  text-indent: -9999px;
+  width: 10px;
+  height: 11px;
+  outline: 0;
+  background: url(images/controls.png) -86px -11px no-repeat;
+  margin: 0 3px;
+}
+
+.bx-wrapper .bx-controls-auto .bx-start:hover,
+.bx-wrapper .bx-controls-auto .bx-start.active {
+  background-position: -86px 0;
+}
+
+.bx-wrapper .bx-controls-auto .bx-stop {
+  display: block;
+  text-indent: -9999px;
+  width: 9px;
+  height: 11px;
+  outline: 0;
+  background: url(images/controls.png) -86px -44px no-repeat;
+  margin: 0 3px;
+}
+
+.bx-wrapper .bx-controls-auto .bx-stop:hover,
+.bx-wrapper .bx-controls-auto .bx-stop.active {
+  background-position: -86px -33px;
+}
+
+/* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
+
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+  text-align: left;
+  width: 80%;
+}
+
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+  right: 0;
+  width: 35px;
+}
+
+/* IMAGE CAPTIONS */
+
+.bx-wrapper .bx-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #666\9;
+  background: rgba(80, 80, 80, 0.75);
+  width: 100%;
+}
+
+.bx-wrapper .bx-caption span {
+  color: #fff;
+  font-family: Arial;
+  display: block;
+  font-size: .85em;
+  padding: 10px;
+}
+#service{
+  overflow: hidden;
+  padding: 0;
+  padding-top: 110px;
+}
+.container_slider{
+  width: 100%;
+  height: 90%;
+  overflow: hidden;
+  position: relative;
+}
+.container_slider ul{
+  margin: 0;
+  padding: 0;
+}
+.container_slider .slide{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.container_slider .slide .content{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 
 .service-icon {
 	margin-bottom: 20px;
@@ -585,6 +828,7 @@ Parallax
 .btn-circle {
     width: 70px;
     height: 70px;
+    margin-bottom: 15px;
     margin-top: 15px;
     padding: 7px 16px;
     border: 2px solid #fff;
