@@ -22,15 +22,17 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 0 0 30px;
+    margin: 0 0 10px;
     text-transform: uppercase;
     font-family: Montserrat,sans-serif;
     font-weight: 700;
     letter-spacing: 1px;
 }
 
+
+
 p {
-    margin: 0 0 20px;
+    margin: 0 0 0px;
     font-size: 19px;
     line-height: 1.4em;
 }
@@ -94,7 +96,7 @@ a:focus {
 .navbar-custom ul.nav li a {
 	font-size: 12px;
 	letter-spacing: 1px;
-    color: #444;
+    color: rgba(255, 255, 255, 1);
 	text-transform: uppercase;
 	font-weight: 700;
 }
@@ -150,7 +152,7 @@ a:focus {
 .navbar-custom .nav li a:focus,
 .navbar-custom .nav li.active {
     outline: 0;
-    background-color: rgba(255,255,255,.2);
+    background-color: rgba(255,255,255,0.1);
 }
 .navbar-custom .nav li a:hover,
 .navbar-custom .nav li a:focus,
@@ -256,6 +258,7 @@ hr {
 
 /* margins */
 .marginbot-0{margin-bottom:0 !important;}
+.marginbot-5{margin-bottom:5px !important;}
 .marginbot-10{margin-bottom:10px !important;}
 .marginbot-20{margin-bottom:20px !important;}
 .marginbot-30{margin-bottom:30px !important;}
@@ -267,8 +270,8 @@ hr {
 ============================ */
 
 .home-section {
-    padding-top: 110px;
-    padding-bottom: 110px;
+    padding-top: 100px;
+    padding-bottom: 5px;
 	display:block;
     position:relative;
     z-index:120;
@@ -279,7 +282,7 @@ hr {
 	font-size: 40px;
 }
 .section-heading i {
-	margin-bottom: 20px;
+	margin-bottom: 2 px;
 }
 
 
@@ -358,14 +361,18 @@ hr {
 .intro .slogan h2 sub{
   text-transform: lowercase;
   position: absolute;
-  bottom: -23px;
+  bottom: -13px;
   left: 0;
   right: 0;
-  font-size: 50%;
+  font-size: 45%;
+  font-weight: 500;
+  font-family: sans-serif;
+  letter-spacing: 0px;
 }
 .intro .slogan h4 {
 	color: #fff;
 	text-shadow: -1px 1px 1px #000;
+    letter-spacing: 4px;
 }
 
 
@@ -636,11 +643,7 @@ hr {
   font-size: .85em;
   padding: 10px;
 }
-#service{
-  overflow: hidden;
-  padding: 0;
-  padding-top: 0px;
-}
+
 .container_slider{
   width: 100%;
   height: 90%;
@@ -763,7 +766,7 @@ form#contact-form input:focus,form#contact-form select:focus,form#contact-form t
 
 footer {
 	text-align: center;
-	padding: 50px 0 ;
+	padding: 5px 0 ;
 	
 }
 
@@ -828,8 +831,8 @@ Parallax
 .btn-circle {
     width: 70px;
     height: 70px;
-    margin-bottom: 15px;
-    margin-top: 15px;
+    margin-bottom: 5px;
+    margin-top: 5px;
     padding: 7px 16px;
     border: 2px solid #fff;
     border-radius: 50%;
@@ -1012,7 +1015,7 @@ Parallax
 @media (max-width:480px) {
 
 	.navbar-custom .nav.navbar-nav {
-    background-color: rgba(255,255,255,.4);
+    background-color: rgba(0, 0, 0, 0.99);
 	}
 	
 	.navbar.navbar-custom.navbar-fixed-top {
