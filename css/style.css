@@ -1040,9 +1040,9 @@ Parallax
 
 .glitch {
   color: white;
-  font-size: 100px;
   position: relative;
-  width: 400px;
+  left: -2px;
+  top: 8px;      
   margin: 0 auto;
 }
 
@@ -1144,7 +1144,7 @@ Parallax
 .glitch:after {
   content: attr(data-text);
   position: absolute;
-  left: 60px;
+  left: 4px;
   text-shadow: -2px 0 #BC002D;
   top: 0;
   color: white;
@@ -1222,7 +1222,7 @@ Parallax
 .glitch:before {
   content: attr(data-text);
   position: absolute;
-  left: 57px;
+  left: 1px;
   text-shadow: -1px 0 blue;
   top: 0;
   color: white;
