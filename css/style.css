@@ -1038,12 +1038,110 @@ Parallax
 	
 }
 
+/* Inizio codice glither su testo */
+
 .glitch {
   color: white;
   position: relative;
-  left: -2px;
-  top: 8px;      
+  left: 0px;
+  top: 0px;      
   margin: 0 auto;
+}
+
+@-webkit-keyframes noise-anim {
+  0% {
+    clip: rect(48px, 1000px, 69px, 0);
+  }
+  3.33333% {
+    clip: rect(56px, 1000px, 7px, 0);
+  }
+  6.66667% {
+    clip: rect(29px, 1000px, 66px, 0);
+  }
+  10% {
+    clip: rect(59px, 1000px, 51px, 0);
+  }
+  13.33333% {
+    clip: rect(6px, 1000px, 95px, 0);
+  }
+  16.66667% {
+    clip: rect(56px, 1000px, 64px, 0);
+  }
+  20% {
+    clip: rect(34px, 1000px, 97px, 0);
+  }
+  23.33333% {
+    clip: rect(100px, 1000px, 15px, 0);
+  }
+  26.66667% {
+    clip: rect(13px, 1000px, 17px, 0);
+  }
+  30% {
+    clip: rect(23px, 1000px, 96px, 0);
+  }
+  33.33333% {
+    clip: rect(62px, 1000px, 19px, 0);
+  }
+  36.66667% {
+    clip: rect(97px, 1000px, 33px, 0);
+  }
+  40% {
+    clip: rect(43px, 1000px, 93px, 0);
+  }
+  43.33333% {
+    clip: rect(18px, 1000px, 21px, 0);
+  }
+  46.66667% {
+    clip: rect(43px, 1000px, 14px, 0);
+  }
+  50% {
+    clip: rect(79px, 1000px, 52px, 0);
+  }
+  53.33333% {
+    clip: rect(49px, 1000px, 76px, 0);
+  }
+  56.66667% {
+    clip: rect(8px, 1000px, 73px, 0);
+  }
+  60% {
+    clip: rect(13px, 1000px, 99px, 0);
+  }
+  63.33333% {
+    clip: rect(20px, 1000px, 13px, 0);
+  }
+  66.66667% {
+    clip: rect(92px, 1000px, 64px, 0);
+  }
+  70% {
+    clip: rect(56px, 1000px, 17px, 0);
+  }
+  73.33333% {
+    clip: rect(35px, 1000px, 7px, 0);
+  }
+  76.66667% {
+    clip: rect(78px, 1000px, 100px, 0);
+  }
+  80% {
+    clip: rect(10px, 1000px, 67px, 0);
+  }
+  83.33333% {
+    clip: rect(72px, 1000px, 43px, 0);
+  }
+  86.66667% {
+    clip: rect(86px, 1000px, 10px, 0);
+  }
+  90% {
+    clip: rect(61px, 1000px, 90px, 0);
+  }
+  93.33333% {
+    clip: rect(21px, 1000px, 26px, 0);
+  }
+  96.66667% {
+    clip: rect(87px, 1000px, 65px, 0);
+  }
+  100% {
+    clip: rect(87px, 1000px, 17px, 0);
+  }
 }
 
 @keyframes noise-anim {
@@ -1141,17 +1239,85 @@ Parallax
     clip: rect(87px, 1000px, 17px, 0);
   }
 }
+
 .glitch:after {
   content: attr(data-text);
   position: absolute;
-  left: 4px;
+  left: 2px;
   text-shadow: -2px 0 #BC002D;
-  top: 0;
+  top: 8px;
   color: white;
 /* background: black; */
   overflow: hidden;
   clip: rect(0, 900px, 0, 0);
+  -webkit-animation: noise-anim 1s infinite linear alternate-reverse;
   animation: noise-anim 1s infinite linear alternate-reverse;
+}
+
+@-webkit-keyframes noise-anim-2 {
+  0% {
+    clip: rect(91px, 9999px, 9560px, 0);
+  }
+  5% {
+    clip: rect(31px, 9999px, 6095px, 0);
+  }
+  10% {
+    clip: rect(77px, 9999px, 1820px, 0);
+  }
+  15.0% {
+    clip: rect(46px, 9999px, 1971px, 0);
+  }
+  20% {
+    clip: rect(28px, 9999px, 8822px, 0);
+  }
+  25% {
+    clip: rect(13px, 9999px, 5927px, 0);
+  }
+  30.0% {
+    clip: rect(81px, 9999px, 905px, 0);
+  }
+  35% {
+    clip: rect(91px, 9999px, 9653px, 0);
+  }
+  40% {
+    clip: rect(88px, 9999px, 5356px, 0);
+  }
+  45% {
+    clip: rect(82px, 9999px, 4952px, 0);
+  }
+  50% {
+    clip: rect(54px, 9999px, 869px, 0);
+  }
+  55.0% {
+    clip: rect(37px, 9999px, 4445px, 0);
+  }
+  60.0% {
+    clip: rect(7px, 9999px, 2175px, 0);
+  }
+  65% {
+    clip: rect(24px, 9999px, 882px, 0);
+  }
+  70% {
+    clip: rect(91px, 9999px, 4880px, 0);
+  }
+  75% {
+    clip: rect(95px, 9999px, 8563px, 0);
+  }
+  80% {
+    clip: rect(46px, 9999px, 1527px, 0);
+  }
+  85.0% {
+    clip: rect(2px, 9999px, 5787px, 0);
+  }
+  90% {
+    clip: rect(96px, 9999px, 9395px, 0);
+  }
+  95% {
+    clip: rect(94px, 9999px, 1741px, 0);
+  }
+  100% {
+    clip: rect(34px, 9999px, 7423px, 0);
+  }
 }
 
 @keyframes noise-anim-2 {
@@ -1224,10 +1390,11 @@ Parallax
   position: absolute;
   left: 1px;
   text-shadow: -1px 0 blue;
-  top: 0;
+  top: 8px;
   color: white;
  /* background: black; */
   overflow: hidden;
   clip: rect(0, 900px, 0, 0);
+  -webkit-animation: noise-anim-2 2s infinite linear alternate-reverse;
   animation: noise-anim-2 2s infinite linear alternate-reverse;
 }
