@@ -60,8 +60,8 @@ a:focus {
 
 .navbar {
     margin-bottom: 0;
-    border-bottom: 1px solid rgba(255,255,255,.3);
-	
+    border-bottom: 0px solid rgba(255,255,255,.3);
+
 }
 
 .navbar-brand {
@@ -78,6 +78,7 @@ a:focus {
 	color: #fff;
   font-size: 20px;
   line-height: 40px;
+  visibility: hidden;
 }
 
 .navbar-brand:focus {
@@ -202,9 +203,8 @@ a:focus {
   opacity: 0.75;
   top: 50%;
   margin: -5px auto 0 auto;
-  left: 0;
+  left: -40px;
   right: 0;
-   
   background-color: #000;
   width: 10px;
   height: 10px;
@@ -588,7 +588,7 @@ hr {
   height: 10px;
   margin: 0 5px;
   outline: 0;
-  -moz-border-radius: 5px;
+  border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
 }
@@ -681,7 +681,7 @@ hr {
   position: absolute;
   bottom: 0;
   left: 0;
-  background: #666\9;
+  background: #666;
   background: rgba(80, 80, 80, 0.75);
   width: 100%;
 }
@@ -938,7 +938,7 @@ Parallax
 }
 
 @-webkit-keyframes pulse {    
-    0 {
+    0% {
         -webkit-transform: scale(1);
         transform: scale(1);
     }
@@ -954,8 +954,8 @@ Parallax
     }
 }
 
-@-moz-keyframes pulse {    
-    0 {
+@keyframes pulse {    
+    0% {
         -moz-transform: scale(1);
         transform: scale(1);
     }
@@ -1050,6 +1050,19 @@ Parallax
 
 }
 @media (max-width:768px) {
+    
+    .navbar-collapse{
+        border-top: 0px solid transparent;
+        background: #000;
+    }
+    
+    .top-nav-collapse .navbar-collapse{
+        background: none;
+    }
+    
+    .navbar-custom .nav.navbar-nav {
+    background-color: rgba(0, 0, 0, 0.99);
+	}
 	
 	.team.boxed-grey {
 		margin-bottom: 30px;
@@ -1063,11 +1076,15 @@ Parallax
 }
 
 @media (max-width:480px) {
-
-	.navbar-custom .nav.navbar-nav {
-    background-color: rgba(0, 0, 0, 0.99);
-	}
-	
+    
+    .navbar-collapse{
+        border-top: 0px solid transparent;
+        background: #000;
+    }
+    
+    .top-nav-collapse .navbar-collapse{
+        background: none;
+    }
 	.navbar.navbar-custom.navbar-fixed-top {
 		margin-bottom: 30px;
 	}

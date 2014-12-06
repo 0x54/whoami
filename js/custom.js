@@ -36,12 +36,23 @@
 
 	//jQuery to collapse the navbar on scroll
 	$(window).scroll(function() {
-		if ($(".navbar").offset().top > 50) {
+		if ($(".navbar").offset().top > 250) {
 			$(".navbar-fixed-top").addClass("top-nav-collapse");
+			$(".navbar-brand h1").css("visibility", "visible");
+            $( "#navbarcustom" ).css( "background", "none" );
 		} else {
 			$(".navbar-fixed-top").removeClass("top-nav-collapse");
+			$(".navbar-brand h1").css("visibility", "hidden");
+            //alert($(window).width() < 769);
+            if ($("#menumobil").hasClass( "in" ) && ($(window).width() < 769) ){
+                $( "#navbarcustom" ).css( "background", "#000" );
+                $(".navbar-brand h1").css("visibility", "visible");
+            }
+            else{
+              $( "#navbarcustom" ).css( "background", "none" );
+            }
 		}
-	});
+	}); 
 
 	//jQuery for page scrolling feature - requires jQuery Easing plugin
 	$(function() {
@@ -65,6 +76,21 @@
 			}, 1500, 'easeInOutExpo');
 			event.preventDefault();
 		});
+		
 	});
+	
 
 })(jQuery);
+
+function mobilemenuON() {
+    if (($(".navbar").offset().top <= 250) && ($(window).width() < 769)) {
+        if( $("#navbarcustom" ).css('background-color') === "rgb(0, 0, 0)") {
+            $( "#navbarcustom" ).css( "background", "none" );
+            $(".navbar-brand h1").css("visibility", "hidden");
+        }
+        else{
+            $( "#navbarcustom" ).css( "background", "#000" );
+            $(".navbar-brand h1").css("visibility", "visible");
+        }
+    }
+};
