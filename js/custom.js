@@ -94,3 +94,39 @@ function mobilemenuON() {
         }
     }
 };
+
+// The plugin code
+(function($){
+    $.fn.parallax = function(options){
+        var $$ = $(this);
+        offset = $$.offset();
+        var defaults = {
+            "start": 0,
+            "stop": offset.top + $$.height(),
+            "coeff": 0.95
+        };
+        
+        var opts = $.extend(defaults, options);
+        
+        windowTop = $(window).scrollTop();
+        newCoord = windowTop * opts.coeff;
+        $$.css({
+                        "background-position": "0 "+ newCoord + "px"
+        });
+        return this.each(function(){
+            $(window).bind('scroll', function() {
+                windowTop = $(window).scrollTop();
+                if((windowTop >= opts.start) && (windowTop <= opts.stop)) {
+                    newCoord = windowTop * opts.coeff;
+                    $$.css({
+                        "background-position": "0 "+ newCoord + "px"
+                    });
+                }
+            });
+        });
+    };
+})(jQuery);
+
+// call the plugin
+$('.intro').parallax({ "coeff":-0.30 });
+$('.slogan').parallax({ "coeff":1.5 });
