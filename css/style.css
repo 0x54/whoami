@@ -425,6 +425,13 @@ hr {
     letter-spacing: 4px;
 }
 
+.fb-like {
+    margin:10px;
+	padding:0;
+/*    display: block; 
+*/
+}
+
 
 /* ===========================
 --- About
@@ -1465,3 +1472,5 @@ Parallax
   -webkit-animation: noise-anim-2 2s infinite linear alternate-reverse;
   animation: noise-anim-2 2s infinite linear alternate-reverse;
 }
+
+
