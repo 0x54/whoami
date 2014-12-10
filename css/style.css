@@ -426,9 +426,9 @@ hr {
 }
 
 .fb-like {
-    position: relative;
-    left: 20px;
-    top:  70px;
+    position: absolute;
+    left: 5%;
+    top:  92%;
     margin: 0px;
 	padding:0;
 /*    display:block; 
