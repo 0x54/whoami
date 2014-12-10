@@ -44,7 +44,7 @@
 			$(".navbar-fixed-top").removeClass("top-nav-collapse");
 			$(".navbar-brand h1").css("visibility", "hidden");
             //alert($(window).width() < 769);
-            if ($("#menumobil").hasClass( "in" ) && ($(window).width() < 769) ){
+            if ($("#menumobil").hasClass( "in" ) && ($(window).width() < 768) ){
                 $( "#navbarcustom" ).css( "background", "#000" );
                 $(".navbar-brand h1").css("visibility", "visible");
             }
@@ -83,7 +83,7 @@
 })(jQuery);
 
 function mobilemenuON() {
-    if (($(".navbar").offset().top <= 250) && ($(window).width() < 769)) {
+    if (($(".navbar").offset().top <= 250) && ($(window).width() < 768)) {
         if( $("#navbarcustom" ).css('background-color') === "rgb(0, 0, 0)") {
             $( "#navbarcustom" ).css( "background", "none" );
             $(".navbar-brand h1").css("visibility", "hidden");
