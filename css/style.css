@@ -1078,10 +1078,10 @@ Parallax
 		margin-bottom: 30px;
 	}
     
-        .fb-like {
+    .fb-like {
     position: relative;
     left: 4%;
-    bottom: 279px%;
+    bottom: 279px;
    }
 }
 
