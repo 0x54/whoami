@@ -428,7 +428,7 @@ hr {
 .fb-like {
     position: relative;
     left: 2%;
-    bottom:  -18%;
+    bottom:  -26%;
 }
 
 
@@ -1077,8 +1077,12 @@ Parallax
 	.boxed-grey {
 		margin-bottom: 30px;
 	}
-
-	
+    
+        .fb-like {
+    position: relative;
+    left: 4%;
+    bottom: 279px%;
+   }
 }
 
 @media (max-width:480px) {
@@ -1111,9 +1115,8 @@ Parallax
     
     .fb-like {
     position: relative;
-    left: 2%;
-    /*top:  27%;*/
-    bottom: -18%;
+    left: 4%;
+    bottom: 279px%;
 }
 	
 }
