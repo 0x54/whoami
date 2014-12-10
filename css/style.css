@@ -425,12 +425,12 @@ hr {
     letter-spacing: 4px;
 }
 
-.fb-like {
+/*.fb-like {
     position: relative;
     left: 2%;
     bottom:  -26%;
 }
-
+*/
 
 /* ===========================
 --- About
@@ -1078,11 +1078,11 @@ Parallax
 		margin-bottom: 30px;
 	}
     
-    .fb-like {
+/*    .fb-like {
     position: relative;
     left: 4%;
     bottom: 290px;
-   }
+   }*/
 }
 
 @media (max-width:480px) {
@@ -1113,10 +1113,10 @@ Parallax
 		font-size: 20px;
 	}
     
-    .fb-like {
+ /*   .fb-like {
     position: relative;
     left: 4%;
-    bottom: 279px;
+    bottom: 279px;*/
 }
 	
 }
