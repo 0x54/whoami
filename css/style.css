@@ -425,12 +425,13 @@ hr {
     letter-spacing: 4px;
 }
 
-/*.fb-like {
-    position: relative;
-    left: 2%;
-    bottom:  -26%;
+.like {
+    position: absolute;
+    left: 15px;
+    bottom: 4%;
+    background: #fff;
 }
-*/
+
 
 /* ===========================
 --- About
@@ -1116,8 +1117,8 @@ Parallax
  /*   .fb-like {
     position: relative;
     left: 4%;
-    bottom: 279px;*/
-}
+    bottom: 279px;
+}*/
 	
 }
 
