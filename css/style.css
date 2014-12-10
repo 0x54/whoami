@@ -405,9 +405,63 @@ hr {
 	border-color: #000;
 	border-style: none;
 	text-shadow: -1px -1px 2px #000;
-  position: relative;
-  margin-bottom: 60px;
+    position: relative;
+    margin-bottom: 60px;
+    visibility: hidden;
+     -webkit-animation: unhide 0s 4s 1 linear;
+    animation:  unhide 0s 4s 1 linear;
+    animation-fill-mode: forwards;
 }
+
+@-webkit-keyframes unhide {
+    from {visibility: hidden;}
+    to {visibility: visible;}
+}
+
+@keyframes unhide {
+    from {visibility: hidden;}
+    to {visibility: visible;}
+} 
+
+#wwho {
+    -webkit-animation:  unhide 0s 1s 1 linear,
+                        fadeIn 2s 1s 1 linear;
+    animation:  unhide 0s 1s 1 linear,
+                fadeIn 2s 1s 1 linear;
+    animation-fill-mode: forwards;
+}
+
+#wam {
+    margin-left: 15px;
+    margin-right: 15px;
+     -webkit-animation: toglimargine 2s 2s 1 linear,
+                        unhide 0s 1.5s 1 linear,
+                        fadeIn 2s 1.5s 1 linear;
+    animation:  toglimargine 1.5s 3s 1 ease-out,
+                unhide 0s 1.5s 1 linear,
+                fadeIn 2s 1.5s 1 linear;
+    animation-fill-mode: forwards;
+}
+
+#wi {
+    -webkit-animation:  unhide 0s 2s 1 linear,
+                        fadeIn 2s 2s 1 linear;
+    animation:  unhide 0s 2s 1 linear,
+                fadeIn 2s 2s 1 linear;
+    animation-fill-mode: forwards;
+
+}
+
+@-webkit-keyframes toglimargine {
+    from {margin-left: 15px;margin-right: 15px}
+    to {margin-left: 0px;margin-right: 0px}
+}
+
+@keyframes toglimargine {
+    from {margin-left: 15px;margin-right: 15px}
+    to {margin-left: 0px;margin-right: 0px}
+} 
+
 .intro .slogan h2 sub{
   text-transform: lowercase;
   position: absolute;
@@ -1331,8 +1385,8 @@ Parallax
 /* background: black; */
   overflow: hidden;
   clip: rect(0, 900px, 0, 0);
-  -webkit-animation: noise-anim 1s infinite linear alternate-reverse;
-  animation: noise-anim 1s infinite linear alternate-reverse;
+  -webkit-animation: noise-anim 1s 4.8s infinite linear alternate-reverse;
+  animation: noise-anim 1s 5s infinite linear alternate-reverse;
 }
 
 @-webkit-keyframes noise-anim-2 {
@@ -1476,8 +1530,8 @@ Parallax
  /* background: black; */
   overflow: hidden;
   clip: rect(0, 900px, 0, 0);
-  -webkit-animation: noise-anim-2 2s infinite linear alternate-reverse;
-  animation: noise-anim-2 2s infinite linear alternate-reverse;
+  -webkit-animation: noise-anim-2 2s 4.8s infinite linear alternate-reverse;
+  animation: noise-anim-2 2s 5s infinite linear alternate-reverse;
 }
 
 
