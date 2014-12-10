@@ -429,7 +429,6 @@ hr {
     position: absolute;
     left: 15px;
     bottom: 4%;
-    background: #fff;
 }
 
 
@@ -1079,13 +1078,13 @@ Parallax
 		margin-bottom: 30px;
 	}
     
-/*    .fb-like {
-    position: relative;
-    left: 4%;
-    bottom: 290px;
-   }*/
+    .like {
+    position: absolute;
+    left: 15px;
+    bottom: 91%;
+   }
 }
-
+  
 @media (max-width:480px) {
     
     .navbar-collapse{
@@ -1114,13 +1113,11 @@ Parallax
 		font-size: 20px;
 	}
     
- /*   .fb-like {
-    position: relative;
-    left: 4%;
-    bottom: 279px;
-}*/
-	
-}
+    .like {
+    position: absolute;
+    left: 15px;
+    bottom: 89%;
+    }
 
 /* Inizio codice glither su testo */
 
