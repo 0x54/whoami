@@ -26,7 +26,7 @@ h1{
 
 h2{
 	color:white;
-	font-size:20px
+	font-size:20px;
     font-family: Montserrat,sans-serif;
     font-weight: 700;
     letter-spacing: 1px;
@@ -37,17 +37,17 @@ h2{
 
 h3{
     font-family: "Lato",sans-serif;
-    font-size:18px;
+    font-size:24px;
     font-weight: 700;
 	color:white
 }
 
 h3 a{
     font-family: "Lato",sans-serif;
-    font-size:18px;
     font-weight: 700;
     letter-spacing: 1px;
-	color:#BC002D
+    color:#BC002D;
+    text-shadow: -1px 1px #FFF;
 }
 
 a:hover, a:focus {
@@ -58,4 +58,29 @@ a:hover, a:focus {
     transition-duration: 0.2s;
     transition-timing-function: ease-in-out;
     transition-delay: 0s;
+}
+
+@media (max-width:767px) {
+    h1{
+        font-size: 71px;
+        margin-top: 11%;
+    }
+    
+    h2 {
+        font-size: 27px;
+        position: absolute;
+        top: 63%;
+    }
+    
+    h3 {
+        position: absolute;
+        top: 84%
+    }
+}
+
+@media (max-width:480px) {
+    
+    h3 {
+        font-size: 21px
+    }
 }
