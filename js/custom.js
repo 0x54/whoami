@@ -14,11 +14,11 @@
 	    effect : "fadeIn",
 	    threshold : $(window).height()
 	});
-	$(".container_slider").css('height', ($(window).height()*0.9));
-	$(".slide").css('height', ($(window).height()*0.9));
+	$(".container_slider").css('height', ($(window).height()*0.94));
+	$(".slide").css('height', ($(window).height()*0.94));
 	$(window).on('resize',function(){
-		$(".container_slider").css('height', ($(window).height()*0.9));
-		$(".slide").css('height', ($(window).height()*0.9));
+		$(".container_slider").css('height', ($(window).height()*0.94));
+		$(".slide").css('height', ($(window).height()*0.94));
 	});
 	window.slider = $('.container_slider ul').bxSlider({
 		slideMargin: 0,
@@ -27,6 +27,7 @@
 		minSlides: 1,
 		infiniteLoop: false,
 		hideControlOnEnd: true,
+        easing: 'ease',
 		onSlideAfter: function($slideElement, oldIndex, newIndex){
 			$(window).trigger('scroll');
 		}

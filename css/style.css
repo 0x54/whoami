@@ -321,7 +321,7 @@ hr {
 	font-size: 40px;
 }
 .section-heading i {
-	margin-bottom: 2 px;
+	margin-bottom: 2px;
 }
 
 
@@ -472,6 +472,12 @@ hr {
     position: absolute;
     left: 15px;
     bottom: 4%;
+}
+
+noscript {
+    position: relative;
+    font-size: 15px;
+    color: #fff;
 }
 
 
@@ -651,13 +657,13 @@ hr {
 
 .bx-wrapper .bx-prev {
   left: 5%;
-  background: url('../img/arrow_l.png') no-repeat center center;
+  background: url('../img/arroww_l.png') no-repeat center center;
   background-size: contain;
 }
 
 .bx-wrapper .bx-next {
   right: 5%;
-  background: url('../img/arrow_r.png') no-repeat center center;
+  background: url('../img/arroww_r.png') no-repeat center center;
   background-size: contain;
 }
 
