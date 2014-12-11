@@ -398,6 +398,7 @@ hr {
     margin-bottom: 60px;
     visibility: hidden;
      -webkit-animation: unhide 0s 4s 1 linear;
+     -webkit-animation-fill-mode: forwards;
     animation:  unhide 0s 4s 1 linear;
     animation-fill-mode: forwards;
 }
@@ -415,6 +416,7 @@ hr {
 #wwho {
     -webkit-animation:  unhide 0s 1s 1 linear,
                         fadeIn 2s 1s 1 linear;
+    -webkit-animation-fill-mode: forwards;
     animation:  unhide 0s 1s 1 linear,
                 fadeIn 2s 1s 1 linear;
     animation-fill-mode: forwards;
@@ -426,6 +428,8 @@ hr {
      -webkit-animation: toglimargine 2s 2s 1 linear,
                         unhide 0s 1.5s 1 linear,
                         fadeIn 2s 1.5s 1 linear;
+     -webkit-animation-fill-mode: forwards;
+
     animation:  toglimargine 1.5s 3s 1 ease-out,
                 unhide 0s 1.5s 1 linear,
                 fadeIn 2s 1.5s 1 linear;
@@ -435,6 +439,8 @@ hr {
 #wi {
     -webkit-animation:  unhide 0s 2s 1 linear,
                         fadeIn 2s 2s 1 linear;
+    -webkit-animation-fill-mode: forwards;
+
     animation:  unhide 0s 2s 1 linear,
                 fadeIn 2s 2s 1 linear;
     animation-fill-mode: forwards;
