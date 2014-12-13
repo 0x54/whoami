@@ -86,8 +86,11 @@
 function mobilemenuON() {
     if (($(".navbar").offset().top <= 250) && ($(window).width() < 768)) {
         if( $("#navbarcustom" ).css('background-color') === "rgb(0, 0, 0)") {
-            $( "#navbarcustom" ).css( "background", "none" );
-            $(".navbar-brand h1").css("visibility", "hidden");
+            setTimeout(function(){
+                $( "#navbarcustom" ).css( "background", "none" );
+                $(".navbar-brand h1").css("visibility", "hidden");
+            }, 350);
+           
         }
         else{
             $( "#navbarcustom" ).css( "background", "#000" );

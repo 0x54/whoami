@@ -89,6 +89,10 @@ a:focus {
     background-color: rgba(255,255,255,.4);
 }
 
+.navbar-nav {
+    margin: 0.5px -15px;
+}
+
 .navbar-custom.top-nav-collapse .nav.navbar-nav {
     background-color: rgba(0,0,0,0);
 }
@@ -313,7 +317,7 @@ hr {
     padding-bottom: 5px;
 	display:block;
     position:relative;
-    z-index:120;
+    /*z-index:120;*/
 }
 
 
@@ -1141,6 +1145,9 @@ Parallax
 }
   
 @media (max-width:480px) {
+    .navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
+    max-height: 285px;
+}
     
     .navbar-collapse{
         border-top: 0px solid transparent;
