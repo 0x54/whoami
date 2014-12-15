@@ -83,21 +83,17 @@
 
 })(jQuery);
 
-function mobilemenuON() {
-    if (($(".navbar").offset().top <= 250) && ($(window).width() < 768)) {
-        if( $("#navbarcustom" ).css('background-color') === "rgb(0, 0, 0)") {
-            setTimeout(function(){
-                $( "#navbarcustom" ).css( "background", "none" );
-                $(".navbar-brand h1").css("visibility", "hidden");
-            }, 350);
-           
-        }
-        else{
-            $( "#navbarcustom" ).css( "background", "#000" );
-            $(".navbar-brand h1").css("visibility", "visible");
-        }
-    }
-};
+
+// email spam protection
+jQuery(document).ready(function(){
+		mailtoellements = jQuery("a[href^='mailto:']");
+		mailtoellements.each(function(item){
+			mailto = jQuery(this).attr('href');
+			jQuery(this).attr('href',mailto.replace(/_\[\at\]\_/gi,"@"));
+			email = jQuery(this).html(); jQuery(this).html(email.replace(/_\[\at\]\_/gi,"@"));
+		});
+	});
+
 
 // The plugin code
 (function($){
