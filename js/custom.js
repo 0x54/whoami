@@ -14,11 +14,11 @@
 	    effect : "fadeIn",
 	    threshold : $(window).height()
 	});
-	$(".container_slider").css('height', ($(window).height()*0.95));
-	$(".slide").css('height', ($(window).height()*0.897));
+	$(".container_slider").css('height', ($(window).height()*0.930));
+	$(".slide").css('height', ($(window).height()*0.838));
 	$(window).on('resize',function(){
-		$(".container_slider").css('height', ($(window).height()*0.95));
-		$(".slide").css('height', ($(window).height()*0.897));
+		$(".container_slider").css('height', ($(window).height()*0.930));
+		$(".slide").css('height', ($(window).height()*0.838));
 	});
 	window.slider = $('.container_slider ul').bxSlider({
 		slideMargin: 0,
@@ -94,6 +94,22 @@ jQuery(document).ready(function(){
 		});
 	});
 
+
+function mobilemenuON() {
+    if (($(".navbar").offset().top <= 250) && ($(window).width() < 768)) {
+        if( $("#navbarcustom" ).css('background-color') === "rgb(0, 0, 0)") {
+            setTimeout(function(){
+                $( "#navbarcustom" ).css( "background", "none" );
+                $(".navbar-brand h1").css("visibility", "hidden");
+            }, 350);
+           
+        }
+        else{
+            $( "#navbarcustom" ).css( "background", "#000" );
+            $(".navbar-brand h1").css("visibility", "visible");
+        }
+    }
+};
 
 // The plugin code
 (function($){
