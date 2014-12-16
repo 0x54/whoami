@@ -14,11 +14,11 @@
 	    effect : "fadeIn",
 	    threshold : $(window).height()
 	});
-	$(".container_slider").css('height', ($(window).height()*0.94));
-	$(".slide").css('height', ($(window).height()*0.94));
+	$(".container_slider").css('height', ($(window).height()*0.95));
+	$(".slide").css('height', ($(window).height()*0.897));
 	$(window).on('resize',function(){
-		$(".container_slider").css('height', ($(window).height()*0.94));
-		$(".slide").css('height', ($(window).height()*0.94));
+		$(".container_slider").css('height', ($(window).height()*0.95));
+		$(".slide").css('height', ($(window).height()*0.897));
 	});
 	window.slider = $('.container_slider ul').bxSlider({
 		slideMargin: 0,
