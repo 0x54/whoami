@@ -801,8 +801,11 @@ noscript {
 	margin-bottom: 20px;
 }	
 
+/* youtube */
 
-
+.embed-responsive .embed-responsive-item {
+    height: 88vh;
+}
 /* ===========================
 --- Contact
 ============================ */
@@ -837,7 +840,6 @@ form#contact-form input:focus,form#contact-form select:focus,form#contact-form t
 
 
 .company-social {
-	margin-left: 0;
 	padding-left: 0;
 	margin-top: 10px;
 }
