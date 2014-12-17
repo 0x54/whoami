@@ -806,6 +806,11 @@ noscript {
 .embed-responsive .embed-responsive-item {
     height: 88vh;
 }
+
+.embed-responsive.embed-responsive-4by3 {
+    padding-bottom: 42%;
+}
+
 /* ===========================
 --- Contact
 ============================ */
