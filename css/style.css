@@ -808,6 +808,7 @@ noscript {
 }
 
 .embed-responsive.embed-responsive-4by3 {
+    margin-top: 25px;
     padding-bottom: 0;
     height: 84vh;
 }
