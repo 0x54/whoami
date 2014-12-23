@@ -4,9 +4,41 @@
 
 	new WOW().init();
 
-	jQuery(window).load(function() { 
-		jQuery("#preloader").delay(100).fadeOut("slow");
-		jQuery("#load").delay(100).fadeOut("slow");
+	jQuery(window).load(function() {
+       // $("body").css("overflow", "hidden");
+/*        jQuery("#menubar").delay(0).hide();
+        jQuery("fb-root").delay(0).hide();
+        jQuery(".page-scroll a").delay(0).hide();*/
+		jQuery(".cube1, .cube2").delay(100).fadeOut("slow", function(){
+            jQuery(".slogan h2, .slogan h4").css('z-index', 1030);
+            jQuery("#wwho").addClass("wwho");
+            jQuery("#wam").addClass("wam");
+            jQuery("#wi").addClass("wi");
+            jQuery(".intro .slogan h2 sub").addClass("subanim");
+            jQuery(".slogan h4").addClass("h4anim");
+        
+        
+        
+      //  jQuery(".slogan h2").css('visibility', 'hidden');
+       
+       // jQuery(".slogan h2, .slogan h4").delay(10000).css('visibility', 'visible');
+       // jQuery(".slogan h4").delay(100).css('z-index', 1030);
+     //   jQuery("#wwho").addClass('wwho');
+        //jQuery(".slogan h2").css('visibility', 'visible');
+        
+      jQuery("#preloader").delay(4000).fadeOut(4000);
+     setTimeout(
+        function() 
+        {
+            jQuery(".slogan h2").css("visibility", "visible");
+        }, 3000);
+        });        
+     /*   jQuery("#menubar").delay(6000).fadeIn('slow');
+        jQuery("fb-root").delay(6000).fadeIn('slow');
+        jQuery(".page-scroll a").delay(6000).fadeIn('slow');*/
+     // jQuery("body").delay(55000).css("overflow", "scroll");
+      //jQuery(".slogan h2").delay(55000).css('visibility', 'visible');
+     // jQuery(".navbar-fixed-top").delay(9000).css('z-index', 1030);
 	});
 
 	

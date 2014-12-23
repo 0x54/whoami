@@ -114,7 +114,7 @@ Copyright (c) 2014 Daniel Eden
 
 /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
 
-@-webkit-keyframes pulse {
+@-webkit-keyframes pulsee {
   0% {
     -webkit-transform: scale3d(1, 1, 1);
             transform: scale3d(1, 1, 1);
@@ -131,7 +131,7 @@ Copyright (c) 2014 Daniel Eden
   }
 }
 
-@keyframes pulse {
+@keyframes pulsee {
   0% {
     -webkit-transform: scale3d(1, 1, 1);
             transform: scale3d(1, 1, 1);
